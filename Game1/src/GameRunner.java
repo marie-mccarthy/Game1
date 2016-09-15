@@ -3,62 +3,70 @@ import java.util.Scanner;
 public class GameRunner
 	{
 		public static void main(String[] args)
-			{
-//				String myArray [][] = new String [2][2];
-//						myArray [0][0] = "|";
-//						myArray [0][1] = " ";						
-//						myArray [1][0] = " ";
-//						myArray [1][1] = "|";
-				String [] myArray = new String [2];
-				 myArray [0] =" ";
-				 myArray [1] ="|";
-
+		{
 				
-				System.out.println("Odds or evens?");
-				Scanner userInputChoice= new Scanner(System.in);
-				String choice = userInputChoice.nextLine();	
-				String odd= "odds";
-				String even= "evens";
-				if(choice.equals("odds"))
-					{
-						System.out.println("ok you chose odd");
-					}
-				if(choice.equals("evens"))
-					{
-						System.out.println("ok you chose even");
-					}
+				
+//				System.out.println("Odds or evens?");
+//				Scanner userInputChoice= new Scanner(System.in);
+//				String choice = "odd";
+//				String choice2 = userInputChoice.nextLine();	
+//				String odd= "odds";
+//				String even= "evens";
+//				if(choice.equals("odds"))
+//					{
+//						System.out.println("ok you chose odd");
+//					}
+//				if(choice.equals("evens"))
+//					{
+//						System.out.println("ok you chose even");
+//					}
 				String yes= " ";
 				String no = "X";
 				int numberA=(int)(Math.random()*8);
-				System.out.println("-start-------------");
-				for(int a = 0; a<9; a++)
-					{
-						for (int i = 0; i < 1 ; i++)
-							{
-								
-								for(int j=0; j <1; j++)
+				int [][] myArray2 = new int [2][4];
+				System.out.println("   [1]      [2]     [3]  ");
+//				for(int a = 0; a<2; a++)
+//					{
+//						for (int i = 0; i < 4 ; i++)
+//							{
+//								
+//								for(int j=0; j <1; j++)
+//									{
+//										 int arrayNumber1=(int)(Math.random()*1)+0;
+//										 int arrayNumber2=(int)(Math.random()*1)+0;
+//										System.out.println("|                        |");
+//									}
+//							}
+						int [][] myArray = new int [2][4];
+						for (int i = 0; i < 2 ; i++)
+							{					 
+								for(int j=0; j <4; j++)
 									{
-										 int arrayNumber1=(int)(Math.random()*1)+0;
-										 int arrayNumber2=(int)(Math.random()*1)+0;
-										System.out.println("|       "+myArray[arrayNumber1]+"        "+myArray[arrayNumber2]+"       |");
+										int number = (int)(Math.random()*8);
+										myArray[i][j]= number;
+										System.out.println("|                        |");
+										System.out.println("--  "+number+"  ---   "+number+"  ---  "+number+"  --");							
 									}
 							}
-						for (int i = 0; i < 1 ; i++)
-							{								
-								for(int j=0; j <1; j++)
+						System.out.println("Choose the odd number in the first, second, or third place");
+						boolean stillPlaying = true;
+						while(stillPlaying = true)
+						for(int a = 0; a < 4 ; a++)
+							{
+								Scanner userInput2= new Scanner(System.in);
+								int place = userInput2.nextInt();
+								int chioce = myArray[a][place-1];
+								if(chioce%2== 1)
 									{
-										int number1=(int)(Math.random()*8);
-										int number2=(int)(Math.random()*8);
-										int number3=(int)(Math.random()*8);
-										
-										System.out.println("--  "+number1+"  ---   "+number2+"  ---  "+number3+"  -- ");
-							
+										System.out.println("Correct!");
+										stillPlaying = true;
+									}
+								else
+									{
+										System.out.println("Incorrect. Game over.");
+										stillPlaying = false;
+									}
 							}
-					}
-//						for()
-//							{
-//							System.out.print( i= 1 );
-//							}								
 			}
 	}
-	}
+	

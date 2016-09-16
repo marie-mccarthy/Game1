@@ -24,7 +24,7 @@ public class GameRunner
 //					}
 				String yes= " ";
 				String no = "X";
-				String a = "0";
+				String b = "0";
 				int [][] myArray1 = new int [2][4];
 				int [][] myArray2 = new int [2][4];
 				int [][] myArray3 = new int [2][4];
@@ -71,7 +71,7 @@ public class GameRunner
 										stillPlaying = false;
 									}
 							}
-						return a;
+						return b;
 		}
 			
 	}

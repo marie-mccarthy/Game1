@@ -4,8 +4,10 @@ public class GameRunner
 	{
 		public static void main(String[] args)
 		{
-				
-				
+			exercise1();			
+		}
+	public static String exercise1()
+	{
 //				System.out.println("Odds or evens?");
 //				Scanner userInputChoice= new Scanner(System.in);
 //				String choice = "odd";
@@ -22,8 +24,10 @@ public class GameRunner
 //					}
 				String yes= " ";
 				String no = "X";
-				int numberA=(int)(Math.random()*8);
+				String a = "0";
+				int [][] myArray1 = new int [2][4];
 				int [][] myArray2 = new int [2][4];
+				int [][] myArray3 = new int [2][4];
 				System.out.println("   [1]      [2]     [3]  ");
 //				for(int a = 0; a<2; a++)
 //					{
@@ -67,6 +71,8 @@ public class GameRunner
 										stillPlaying = false;
 									}
 							}
-			}
+						return a;
+		}
+			
 	}
 	

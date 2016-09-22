@@ -54,23 +54,38 @@ public class GameRunner
 							{					 
 								for(int j=0; j <4; j++)
 									{
-									//	int number = (int)(Math.random()*8+1);
-										int [] a1 =new int [] {4, 7, 8};
-					
+										int number1 = (int)(Math.random()*7+1);
+										int number2 = (int)(Math.random()*7+1);
+										int number3 = (int)(Math.random()*7+1);
+
+										int [] a1 =new int [] {1, 2, 3, 4, 5, 6, 7, 8,};
+										
 							//			myArray[i][j]= a1;
 										System.out.println("|                        |");
-										System.out.println("--  "+Arrays.toString(a1)+"  ---   "+Arrays.toString(a1)+"  ---  "+Arrays.toString(a1)+"  --");							
-									}
-							}
+									//	System.out.println("--  "+Arrays.toString(a1)+"  ---   "+Arrays.toString(a1)+"  ---  "+Arrays.toString(a1)+"  --");							
+										System.out.println("--  "+a1[number1]+"  ---   "+a1[number2]+"  ---  "+a1[number3]+"  --");						
+//									}
+//							}
 						System.out.println("Choose the odd number in the first, second, or third place");
 						boolean stillPlaying = true;
 						while(stillPlaying = true)
-						for(int a = 0; a < 4 ; a++)
-							{
-								Scanner userInput2= new Scanner(System.in);
-								int place = userInput2.nextInt();
-								int choice = myArray[a][place-1];
-								if(choice%2== 1)
+//						for(int a = 0; a < 4 ; a++)
+//							{
+							 userInputWord2= new Scanner(System.in);						
+							String userChoice1 = userInputWord2.nextLine();	
+								if(userChoice1.equals(1))
+									{
+										userChoice2= a1[number1];										
+									}
+								if(userChoice1.equals(2))
+									{
+										userChoice2= a1[number2];										
+									}
+								if(userChoice1.equals(3))
+									{
+										int userChoice2= a1[number3];										
+									}
+								if(userChoice2%2== 1)
 									{
 										System.out.println("Correct!");
 										stillPlaying = true;
@@ -80,6 +95,7 @@ public class GameRunner
 										System.out.println("Incorrect. Game over.");
 										stillPlaying = false;
 									}
+							}
 							}
 						return b;
 		}
